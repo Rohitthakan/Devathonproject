@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    body{
+        background: rgb(161,167,140);
+    }
+
+    nav {
+        position: fixed;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.3vw 1vw;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+        z-index: 999;
+    }
+
+    nav a img {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 65px;
+        /* width: 35%; */
+        cursor: pointer;
+        border-radius: 15px;
+        margin-left: 10px;
+        margin-top: 8px;
+    }
+
+    .new{
+        margin-right: 50px;
+        /* width: 19%; */
+        background: white;
+    }
+
+    nav .navigation {
+        display: flex;
+    }
+
+    nav .navigation ul {
+        display: inline-flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 30px 50px;
+    }
+
+    nav .navigation ul li {
+        list-style: none;
+        margin-left: 50px;
+    }
+
+    nav .navigation ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+        transition: 0.3s ease;
+    }
+
+    nav::before {
+        content: "";
+        background-color: black;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.5;
+    }
+
+    nav .navigation ul li a.active,
+    nav .navigation ul li a:hover {
+        color: #fdc938;
+    }
+
+    #home {
+        background-image: url("hostelback1.png");
+        width: 100%;
+        height: 100vh;
+        color: white;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: 80px;
+    }
+
+    #home h2{
+        font-size: 2.5rem;
+        color: rgb(18,3,81);
+    }
+
+    #home p {
+        width: 50%;
+        color: rgb(18, 3, 81);
+        font-size: 1.2rem;
+        line-height: 25px;
+    }
+
+    #services {
+        margin: 34px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #services .box {
+        border: 2px solid brown;
+        padding: 14px;
+        padding: 0px 65px;
+        margin: 15px 10px;
+        border-radius: 28px;
+        background: #e7eaed;
+        margin-bottom: 20px;
+    }
+
+    #serices .box img {
+        width: 7%;
+        margin: auto;
+        display: block;
+    }
+
+    #services .box p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
+    }
+
+    #services .box h2 {
+        font-size: 35px;
+    }
+
+    #services .box h2:hover {
+        cursor: pointer;
+        color: #fdc938;
+    }
+
+    #circle2 {
+        border: 2px solid #fdc938;
+        border-radius: 30px;
+        font-size: 35px;
+        margin: 15px 15px;
+        color: rgb(163, 147, 147);
+    }
+
+    .inputBox {
+        display: flex;
+        flex-direction: row;
+        margin: 15px 0;
+    }
+
+    #span {
+        font-size: 45px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: left;
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+
+    .container form .row .col .flex {
+        display: flex;
+        gap: 15px;
+    }
+
+    #circle2:hover {
+        cursor: pointer;
+    }
+
+    #circle1 {
+        border: 2px solid #fdc938;
+        border-radius: 30px;
+        font-size: 35px;
+        margin: 15px 15px;
+        color: #fff;
+    }
+
+    #circle1:hover {
+        cursor: pointer;
+    }
+
+    /* footer */
+    .contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgb(67, 7, 7);
+        padding-top: 30px;
+        color: #fff;
+        padding-bottom: 30px;
+
+    }
+    footer {
+        padding: 4vw;
+        background-color: rgb(67, 7, 7);
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    footer .foot {
+        padding-bottom: 0px;
+    }
+
+    footer .foot img {
+        width: 40%;
+        border-radius: 15px;
+        margin-left: 40px;
+    }
+
+    footer .foot li {
+        color: #fff;
+        margin-top: 25px;
+    }
+
+    footer .foot li:hover {
+        color: #fdc938;
+    }
+
+    footer h2 {
+        color: rgb(241, 240, 245);
+        font-weight: 600;
+        padding-bottom: 15px;
+        padding-left: 0px;
+        margin-top: 70px;
+    }
+
+    footer h3 {
+        list-style: none;
+        color: #7b838a;
+        padding: 4px;
+        font-size: 20px;
+        cursor: pointer;
+        transition: .3s ease;
+    }
+
+    footer div p {
+        margin-top: 150px;
+        margin-left: 450px;
+        color: #7b838a;
+
+    }
+
+    footer h3:hover {
+        color: #fdc938;
+    }
+
+    .copy{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(68,7,7);
+    }
+
+    .copy li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+
+    .copy li:hover {
+        color: #fdc938;
+    }
+
+    /* Responsive */
+    @media only screen and (max-width: 900px) {
+        #services {
+            flex-direction: column;
+        }
+    }
+ 
+    @media only screen and (max-width: 770px) {
+        .navigation ul li a{
+            display: none;
+        }
+        .new{
+            margin-right: 0px;
+            width: 80%;
+        }
+        nav a img{
+            /* margin-left: 0px; */
+            width: 100%;
+        }
+    }   
+</style>
+
+<body>
+    <nav>
+        <a href="https://nitw.ac.in/cii/">
+            <img src="nitwlogo.png" alt="">
+        </a>
+        <div class="navigation">
+            <ul>
+                <li><a class="active" href="#">HOME</a></li>
+                <li><a href="profile.html">DASHBOARD</a></li>
+                <li><a href="feedback.html">FEEDBACK</a></li>
+                <li><a href="login.html">SIGN-IN</a></li>
+            </ul>
+        </div>
+        <a href="new.html">
+            <img src="new.png" alt="" class="new">
+        </a>
+    </nav>
+
+    <section id="home">
+        <h2>What we are?</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus eos excepturi nostrum, aliquid, illo quae
+            maiores ipsum delectus quam et inventore id nihil quia assumenda quibusdam culpa magnam ab. Lorem ipsum
+            dolor sit, amet consectetur adipisicing elit. Temporibus, repellat error voluptatum quas asperiores
+            obcaecati?</p>
+    </section>
+
+    <span id="span">Queries :</span>
+    <div class="inputBox">
+        <h2>Public</h2>
+        <a href="home.html"><i class="fa fa-circle" id="circle1"></i></a>
+        <h2>Private</h2>
+        <a href="private.html"><i class="fa fa-circle" id="circle2"></i></a>
+
+    </div>
+    <div id="services">
+        <div class="box">
+            <h2 class="h-secondary center">Unresolved Queries</h2>
+            <p class="center">2</p>
+            <ol>Lorem ipsum dolor sit amet consectetur.</ol>
+            <ol>Lorem ipsum dolor sit amet consectetur.</ol>
+        </div>
+        <div class="box">
+            <h2 class="h-secondary center">Resolved Queries</h2>
+            <p class="center">3</p>
+            <ol>Lorem ipsum dolor sit amet consectetur.</ol>
+            <ol>Lorem ipsum dolor sit amet consectetur.</ol>
+            <ol>Lorem ipsum dolor sit amet consectetur.</ol>
+        </div>
+        <div class="box">
+            <h2 class="h-secondary center">Total Queries</h2>
+            <p class="center">5</p>
+            <ol>Lorem ipsum dolor sit amet consectetur.</ol>
+            <ol>Lorem ipsum dolor sit amet consectetur.</ol>
+            <ol>Lorem ipsum dolor sit amet consectetur.</ol>
+            <ol>Lorem ipsum dolor sit amet consectetur.</ol>
+            <ol>Lorem ipsum dolor sit amet consectetur.</ol>
+        </div>
+    </div>
+        <h1 class="contact">CONTACT US</h1>
+    <footer>
+        <div class="foot">
+            <a href="https://www.nitw.ac.in/">
+                <img src="nitwlogo.png" alt="">
+            </a>
+        </div>
+
+        <div class="foot">
+            <h2>WSDC NITW</h2>
+            <h3>The Web and Software Development Cell of</h3>
+            <h3>NIT Warangal Is The Brain And Brawn Behind</h3>
+            <h3> All Things Online In The College</h3>
+        </div>
+        <div class="foot">
+            <h2>NIT, Warangal</h2>
+            <h3>Hanumakonda-506 004,Telangana State, INDIA</h3>
+            <h3>hod_cii@student.nitw.ac.in</h3>
+            <h3>ig-nitw@student.nitw.ac.in</h3>
+        </div>
+    </footer>
+    <div class="copy">
+        <li>Copyright ©2022 All rights reserved | This template was made for NITW</li>
+    </div>
+</body>
+
+</html>

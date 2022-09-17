@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</head>
+<style>
+    body {
+    background: rgb(99, 39, 120)
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #BA68C8
+}
+
+.profile-button {
+    background: rgb(99, 39, 120);
+    box-shadow: none;
+    border: none
+}
+
+.profile-button:hover {
+    background: #682773
+}
+
+.profile-button:focus {
+    background: #682773;
+    box-shadow: none
+}
+
+.profile-button:active {
+    background: #682773;
+    box-shadow: none
+}
+
+.back:hover {
+    color: #682773;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 11px
+}
+
+.add-experience:hover {
+    background: #BA68C8;
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px #BA68C8
+}
+/* footer */
+.contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgb(67, 7, 7);
+        padding-top: 30px;
+        color: #fff;
+        padding-bottom: 30px;
+
+    }
+    footer {
+        padding: 4vw;
+        background-color: rgb(67, 7, 7);
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    footer .foot {
+        padding-bottom: 0px;
+    }
+
+    footer .foot img {
+        width: 40%;
+        border-radius: 15px;
+        margin-left: 40px;
+    }
+
+    footer .foot li {
+        color: #fff;
+        margin-top: 25px;
+    }
+
+    footer .foot li:hover {
+        color: #fdc938;
+    }
+
+    footer h2 {
+        color: rgb(241, 240, 245);
+        font-weight: 600;
+        padding-bottom: 15px;
+        padding-left: 0px;
+        margin-top: 70px;
+    }
+
+    footer h3 {
+        list-style: none;
+        color: #7b838a;
+        padding: 4px;
+        font-size: 20px;
+        cursor: pointer;
+        transition: .3s ease;
+    }
+
+    footer div p {
+        margin-top: 150px;
+        margin-left: 450px;
+        color: #7b838a;
+
+    }
+
+    footer h3:hover {
+        color: #fdc938;
+    }
+
+    .copy{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(68,7,7);
+    }
+
+    .copy li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+
+    .copy li:hover {
+        color: #fdc938;
+    }
+</style>
+<body>
+    <div class="container rounded bg-white mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-3 border-right">
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">Mr. XYZ</span><span class="text-black-50">employee@mail.com</span><span> </span></div>
+            </div>
+            <div class="col-md-5 border-right">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right">Profile Settings</h4>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="First name" value=""></div>
+                        <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="" placeholder="Surname"></div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-12"><label class="labels">Registration Number</label><input type="text" class="form-control" placeholder="Enter your roll number" value=""></div>
+                        <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" placeholder="Enter phone number" value=""></div>
+                        <div class="col-md-12"><label class="labels">Email ID</label><input type="text" class="form-control" placeholder="Enter email id" value=""></div>
+                        <div class="col-md-12"><label class="labels">Employer ID</label><input type="text" class="form-control" placeholder="Enter your employer id" value=""></div>
+                        <div class="col-md-12">
+                            Specification: <select name="specification">
+                                <option value="Electrician">Electrician</option>
+                                <option value="Carpenter">Carpenter</option>
+                                <option value="Plumber">Plumber</option>
+                                <option value="Senitory Supervisor">Senitory Supervisor</option>
+                                <option value="Data Center">Data Center</option>
+                            </select>
+                        </div>
+                    </div>
+                    <a href="home.html"><div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save
+                        Profile</button></div></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center experience"><span>Edit Summary</span><span class="border px-3 p-1 add-experience"><i class="fa fa-plus"></i>&nbsp;Summary</span></div><br>
+                    <div class="col-md-12"><label class="labels">About </label><input type="text" class="form-control" placeholder="Something about you" value=""></div> <br>
+                    <div class="col-md-12"><label class="labels">Additional Details</label><input type="text" class="form-control" placeholder="additional details" value=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <h1 class="contact">CONTACT US</h1>
+    <footer>
+        <div class="foot">
+            <a href="https://www.nitw.ac.in/">
+                <img src="nitwlogo.png" alt="">
+            </a>
+        </div>
+
+        <div class="foot">
+            <h2>WSDC NITW</h2>
+            <h3>The Web and Software Development Cell of</h3>
+            <h3>NIT Warangal Is The Brain And Brawn Behind</h3>
+            <h3> All Things Online In The College</h3>
+        </div>
+        <div class="foot">
+            <h2>NIT, Warangal</h2>
+            <h3>Hanumakonda-506 004,Telangana State, INDIA</h3>
+            <h3>hod_cii@student.nitw.ac.in</h3>
+            <h3>ig-nitw@student.nitw.ac.in</h3>
+        </div>
+    </footer>
+    <div class="copy">
+        <li>Copyright ©2022 All rights reserved | This template was made for NITW</li>
+    </div>
+</body>
+</html>
